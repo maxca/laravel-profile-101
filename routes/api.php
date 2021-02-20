@@ -23,4 +23,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/simple', [SimpleController::class ,'test']);
 Route::post('/create', [StudentController::class, 'create']);
+Route::get('/get', [StudentController::class, 'get']);
+Route::get('/page', [StudentController::class, 'page']);
+
+Route::delete('/delete', [StudentController::class, 'delete']);
+Route::get('/search', [StudentController::class, 'search']);
+Route::post('/update', [StudentController::class, 'update']);
+# create address 
+Route::post('/address/create', [StudentController::class, 'createAddress']);
 

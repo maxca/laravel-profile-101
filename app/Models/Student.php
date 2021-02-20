@@ -20,4 +20,9 @@ class Student extends Model
         'faculty',
         'year',
     ];
+
+    public function address()
+    {
+        return $this->hasOne(Address::class, 'student_id', 'student_id');
+    }
 }
